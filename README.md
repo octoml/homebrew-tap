@@ -1,2 +1,24 @@
 # homebrew-tap
 Homebrew Tap of OctoML products and tools.
+
+## What is Homebrew?
+
+Package manager for macOS (or Linux), see more at https://brew.sh
+
+## What is a Tap?
+
+A third-party (in relation to Homebrew) repository providing installable packages (formulae) on macOS and Linux.
+
+See more at https://docs.brew.sh/Taps
+
+## How do I install packages from here?
+
+```bash
+brew install octoml/tap/name
+```
+
+You can directly add the tap making its formulae available in the `brew search` results:
+
+```bash
+brew tap octoml/tap
+```
