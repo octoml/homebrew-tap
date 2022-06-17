@@ -1,4 +1,4 @@
-class OctoML < Formula
+class Octoml < Formula
   desc "The OctoML CLI for packaging and deploying models."
   homepage "https://octoml.ai"
   url "https://downloads.octoml.ai/octoml_macOS_v0.4.4.zip"
