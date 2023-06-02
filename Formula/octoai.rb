@@ -9,7 +9,7 @@ class Octoai < Formula
   license ":cannot_represent"
 
   depends_on "git"
-  depends_on "docker"
+  depends_on "docker" => :optional
   depends_on "python"
 
   on_macos do
