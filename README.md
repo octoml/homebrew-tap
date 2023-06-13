@@ -1,6 +1,6 @@
 # OctoML's Homebrew Tap
 
-Homebrew Tap of OctoML products and tool the preferred way to instal the `octoai` CLI on macOS. 
+Homebrew Tap of OctoML products and tool the preferred way to install the `octoai` CLI on macOS. 
 
 ## How do I install packages from here?
 
