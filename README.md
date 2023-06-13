@@ -5,7 +5,7 @@ Homebrew Tap of OctoML products and tool the preferred way to instal the `octoai
 ## How do I install packages from here?
 
 ```bash
-brew install octoml/tap/name
+brew install octoml/tap/<FORMULA_NAME>
 ```
 
 You can directly add the tap making its formulae available in the `brew search` results:
