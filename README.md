@@ -17,7 +17,7 @@ brew tap octoml/tap
 For example you can do the below to install our CLI:
 
 ```
-brew tap octoml
+brew tap octoml/tap
 brew install octoai
 ```
 
