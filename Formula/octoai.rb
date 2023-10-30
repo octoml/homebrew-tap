@@ -11,7 +11,7 @@ class Octoai < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.1/octoai_0.5.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "29e5aa3aa50953d099a7c32956f5d69864a75e62c60c603074307f310639e042"
+      sha256 "0f89314643671f87a4088198dcc78af5915ea67b1fa4cc578bb0f1f85cbb7081"
 
       def install
         bin.install "octoai"
@@ -19,7 +19,7 @@ class Octoai < Formula
     end
     if Hardware::CPU.intel?
       url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.1/octoai_0.5.1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a6789eb0fd332e7e023433c0bcde18c501cf81dac07c0a06d1c4917375ff521a"
+      sha256 "3c3768c99f1bb8f97ff7df8479663ebc9e5dc43669abd8f872af1cedfed857dc"
 
       def install
         bin.install "octoai"
@@ -30,7 +30,7 @@ class Octoai < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.1/octoai_0.5.1_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "03c422c4f97f762d622ec1d1c162005a6d37795deef5d2c9c3ddb371f657ec61"
+      sha256 "4d438a7955b43b3a8a507801b0ef09c2f1ce175033024e177925001f3353db34"
 
       def install
         bin.install "octoai"
@@ -38,7 +38,7 @@ class Octoai < Formula
     end
     if Hardware::CPU.intel?
       url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.1/octoai_0.5.1_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "fbaa6bcfc59229d13604f5e2b1ed30e15658dc0d6e4a3332263253ddbcb0f487"
+      sha256 "24e56b8c468311dc046db892f6a633d0e0e08eb321608ec461d000565495c34f"
 
       def install
         bin.install "octoai"
