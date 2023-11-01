@@ -5,21 +5,21 @@
 class Octoai < Formula
   desc "The CLI for the OctoAI Compute Service."
   homepage "https://octoai.cloud"
-  version "0.5.1"
+  version "0.5.2"
   license ":cannot_represent"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.1/octoai_0.5.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0f89314643671f87a4088198dcc78af5915ea67b1fa4cc578bb0f1f85cbb7081"
+      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.2/octoai_0.5.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "3ac4eba2f6ad7efad5d28a8f164621d7d11d7c4313cdb85aa80bff6fc4aca1e2"
 
       def install
         bin.install "octoai"
       end
     end
     if Hardware::CPU.intel?
-      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.1/octoai_0.5.1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3c3768c99f1bb8f97ff7df8479663ebc9e5dc43669abd8f872af1cedfed857dc"
+      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.2/octoai_0.5.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "aafd7b1ac0bd76466e62e18afdbae3bd70a4e69b6de9dfb6a2b2be7890bb45fb"
 
       def install
         bin.install "octoai"
@@ -29,16 +29,16 @@ class Octoai < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.1/octoai_0.5.1_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4d438a7955b43b3a8a507801b0ef09c2f1ce175033024e177925001f3353db34"
+      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.2/octoai_0.5.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e22ae8e40334769c94463ead83acda22bc108fbdc0383edafbf1ff5325028a2f"
 
       def install
         bin.install "octoai"
       end
     end
     if Hardware::CPU.intel?
-      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.1/octoai_0.5.1_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "24e56b8c468311dc046db892f6a633d0e0e08eb321608ec461d000565495c34f"
+      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.2/octoai_0.5.2_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6ec6f32315b251620fd808e6c597fa40fd3149a3904670c0ff6c9b99c33388d2"
 
       def install
         bin.install "octoai"
