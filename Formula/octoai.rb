@@ -5,21 +5,21 @@
 class Octoai < Formula
   desc "The CLI for the OctoAI Compute Service."
   homepage "https://octoai.cloud"
-  version "0.5.26"
+  version "0.5.27"
   license ":cannot_represent"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.26/octoai_0.5.26_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f8002ddb0ad3023edcc6584307cb4541ada544bac3b46bbd0f9eb52461a69d8a"
+    on_intel do
+      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.27/octoai_0.5.27_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "03ce0c6afa1a103c4a755e6e62e6fa730ee1843d042773998eabdf0d79d82e9d"
 
       def install
         bin.install "octoai"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.26/octoai_0.5.26_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "cb1b829a30405acc9ec386c58ac2cdcb6d327e63c0ba3162b4993bdf9ac88233"
+    on_arm do
+      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.27/octoai_0.5.27_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "766c0d32473455ef4642405783c226c4f07f2c54e4a3f60f164bdebe16117cdd"
 
       def install
         bin.install "octoai"
@@ -28,20 +28,24 @@ class Octoai < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.26/octoai_0.5.26_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7dc073a9f7caa469b95db2bf0938720a6fdabb5b132202e4ff358f9cdb415211"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.27/octoai_0.5.27_linux_amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "bf398f09f0f3dff1e19d4e6fc782bfda460e1b9cddd1ffb24c6ced095e403d2d"
 
-      def install
-        bin.install "octoai"
+        def install
+          bin.install "octoai"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.26/octoai_0.5.26_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2e20ac4727d1af506f62fd4c1f2a5b98c9cbd64840e263a0455ec1b2ed22b41f"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://s3.amazonaws.com/downloads.octoai.cloud/octoai/v0.5.27/octoai_0.5.27_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "0a4a67acfecbb353c09448456ddfa56204b8dba431e36689796d167413f9cb72"
 
-      def install
-        bin.install "octoai"
+        def install
+          bin.install "octoai"
+        end
       end
     end
   end
